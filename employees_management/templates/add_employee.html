@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Employee</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            background-color: #00bcd4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Add a New Employee</h1>
+
+    <form method="post">
+
+        <label for="full_name">Full Name:</label>
+        <input type="text" name="full_name" required>
+        <br>
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" required>
+        <br>
+
+        <label for="date_of_birth">Date of Birth:</label>
+        <input type="text" name="date_of_birth" required>
+        <br>
+
+        <label for="salary">Salary:</label>
+        <input type="number" name="salary" required>
+        <br>
+
+        <label for="department">Department:</label>
+        <input type="text" name="department" required>
+        <br>
+
+        <button type="submit">Add Employee</button>
+
+    </form>
+
+</body>
+</html>

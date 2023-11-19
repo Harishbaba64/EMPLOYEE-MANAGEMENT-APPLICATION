@@ -1,0 +1,54 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Employees</title>
+</head>
+<body style="font-family: 'Arial', sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; text-align: center;">
+
+    <h1 style="color: #333;">List of Employees</h1>
+
+    
+
+    {% if employees %}
+        <table style="width: 80%; margin: 20px auto; border-collapse: collapse; background-color: #fff;">
+            <thead>
+                <tr>
+                    <th style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #00bcd4; color: #fff;">ID</th>
+                    <th style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #00bcd4; color: #fff;">Full Name</th>
+                    <th style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #00bcd4; color: #fff;">Age</th>
+                    <th style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #00bcd4; color: #fff;">Date of Birth</th>
+                    <th style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #00bcd4; color: #fff;">Salary</th>
+                    <th style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #00bcd4; color: #fff;">Department</th>
+                    <th style="border: 1px solid #ddd; padding: 10px; text-align: left; background-color: #00bcd4; color: #fff;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for employee in employees %}
+                    <tr>
+                        <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">{{ employee.id }}</td>
+                        <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">{{ employee.full_name }}</td>
+                        <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">{{ employee.age }}</td>
+                        <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">{{ employee.date_of_birth }}</td>
+                        <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">{{ employee.salary }}</td>
+                        <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">{{ employee.department }}</td>
+                        <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">
+                            <a href="{{ url_for('update_employee', id=employee.id) }}" style="color: #00bcd4; text-decoration: none;">Update</a>
+                            <a href="{{ url_for('delete_employee', id=employee.id) }}" style="color: #00bcd4; text-decoration: none; margin-left: 10px;">Delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p style="color: #555;">No employees available.</p>
+    {% endif %}
+    <a href="{{ url_for('add_employee_page') }}" style="display: inline-block; margin: 10px 0; padding: 10px; background-color: #00bcd4; color: #fff; text-decoration: none; text-align: center; border-radius: 5px;">Add Employee</a>
+
+    
+
+</body>
+</html>

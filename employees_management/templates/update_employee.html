@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Employee</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        form {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #00bcd4;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Update Employee Record</h1>
+    
+    <form method="post">
+        <label for="full_name">Full Name:</label>
+        <input type="text" name="full_name" value="{{ employee.full_name }}" required>
+        
+        <label for="age">Age:</label>
+        <input type="number" name="age" value="{{ employee.age }}" required>
+        
+        <label for="date_of_birth">Date of Birth:</label>
+        <input type="text" name="date_of_birth" value="{{ employee.date_of_birth }}" required>
+        
+        <label for="salary">Salary:</label>
+        <input type="number" name="salary" value="{{ employee.salary }}" required>
+        
+        <label for="department">Department:</label>
+        <input type="text" name="department" value="{{ employee.department }}" required>
+        
+        <button type="submit">Update</button>
+    </form>
+
+</body>
+</html>

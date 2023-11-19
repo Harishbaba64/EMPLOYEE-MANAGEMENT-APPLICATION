@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            background-color: #00bcd4;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to the Employee Management Application</h1>
+
+    <ul>
+        <li><a href="{{ url_for('show_employees') }}">Show all Employees</a></li>
+        <li><a href="{{ url_for('filter_employees') }}">Filter Employees</a></li>
+        <li><a href="{{ url_for('search_employee') }}">Search for an Employee</a></li>
+        <li><a href="{{ url_for('add_employee_page') }}">Add a New Employee</a></li>
+    </ul>
+
+</body>
+</html>
