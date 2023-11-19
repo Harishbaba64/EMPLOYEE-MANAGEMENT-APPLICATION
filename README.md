@@ -28,9 +28,9 @@ This is a simple Employee Management Application built using Flask.
 
 1. Run the application:
 
-    
+    ```bash
     python app.py
-    
+    ```
 
 2. Open your web browser and go to http://hairsh.pythonanywhere.com/.
 
